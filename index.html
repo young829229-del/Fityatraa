@@ -861,3 +861,141 @@ updateCartUI();
 
 </body>
 </html>
+const PRODUCTS = [
+  {
+    id: "creatine",
+    name: "Wellcore Micronised Creatine Monohydrate",
+    price: 2199,
+    strike: 3199,
+    save: 31,
+    images: [
+      "https://img.sanishtech.com/u/e656c084bc93a0d6e71ba51eb130dd7c.jpg",
+      "https://img.sanishtech.com/u/9420ef6d75081f9bbad459ee56d74ad0.jpg",
+      "https://img.sanishtech.com/u/afd32b8166b2a1273c1a6872418698e2.jpg",
+      "https://img.sanishtech.com/u/5cc209ebc073b0ec22c7f0e033014185.png",
+      "https://img.sanishtech.com/u/1a1c6959d44c415f4387de7c47ff93a7.png"
+    ],
+    highlights: [
+      "100% Micronised Creatine Monohydrate for better mixability",
+      "Supports strength, power & lean muscle during high-intensity training",
+      "Unflavoured — stacks easily with any pre/post-workout drink",
+      "Lab-tested for purity, 100% original guaranteed"
+    ],
+    usage: "Take 3–5g daily, mixed with water or your regular shake. Best taken post-workout or at a consistent time each day."
+  },
+  {
+    id: "lcarnitine",
+    name: "MuscleBlaze Liquid L-Carnitine 1100mg",
+    price: 2150,
+    strike: 3199,
+    save: 32,
+    images: [
+      "https://img.sanishtech.com/u/fa224776832667569d2c4741fa5b19de.jpg",
+      "https://img.sanishtech.com/u/bd57c14d8dd504a40b1199556234ea55.jpg",
+      "https://img.sanishtech.com/u/54dca7e60a152fea4de03bf34f435dea.jpg",
+      "https://img.sanishtech.com/u/3b41acebdcac74973a788aac8a062afc.jpg",
+      "https://img.sanishtech.com/u/c14213dd319861479500e9217384e0c7.jpg",
+      "https://img.sanishtech.com/u/7f0768e280c98f3f3d2bb528182ba500.jpg"
+    ],
+    highlights: [
+      "1100mg Liquid L-Carnitine per serving for fast absorption",
+      "Supports fat metabolism and workout endurance",
+      "Convenient ready-to-drink liquid format",
+      "100% original, guaranteed authentic"
+    ],
+    usage: "Take one serving 30 minutes before workout, or as directed on the label."
+  },
+  {
+    id: "collagen",
+    cardImage: "https://img.sanishtech.com/u/a98d2d19dbe386e33015cf6dbdfd600e.png",
+    name: "HealthKart Skin Radiance Marine Collagen",
+    price: 2499,
+    strike: 3499,
+    save: 29,
+    images: [
+      "https://img.sanishtech.com/u/15e5ef57eef8bb47339c1eb9e05767c4.png",
+      "https://img.sanishtech.com/u/25fc603baddf90a9cba60519772f27d9.png",
+      "https://img.sanishtech.com/u/1418a666f208959283e7d98334a12a3b.png"
+    ],
+    highlights: [
+      "Marine-sourced hydrolysed collagen peptides",
+      "Supports skin radiance, hair strength & joint health",
+      "Easily dissolves in water, juice, or smoothies",
+      "100% original, guaranteed authentic"
+    ],
+    usage: "Mix one scoop daily into water or your favourite beverage, preferably on an empty stomach."
+  },
+  {
+    id: "peanutbutter",
+    cardImage: "https://img.sanishtech.com/u/2eb5a3bb0b25bab263f24211f318f07b.jpg",
+    name: "Original Crunchy Peanut Butter (25% Protein)",
+    price: 599,
+    strike: 899,
+    save: 33,
+    images: [
+      "https://img.sanishtech.com/u/6e2bfc1a3f0cb5940e22adbb88879e95.jpg",
+      "https://img.sanishtech.com/u/8796eaa638c74103f8b2f4d449fcfb31.jpg",
+      "https://img.sanishtech.com/u/a31a335317790f4e7f572b2427e1bd38.jpg",
+      "https://img.sanishtech.com/u/1a7c81999e279052791219ee7269df4a.jpg",
+      "https://img.sanishtech.com/u/f2b529f6c6a53a9ac556ae3254fa1134.jpg",
+      "https://img.sanishtech.com/u/a3a5ee5b671e2f8d0a85adf9f2358165.jpg",
+      "https://img.sanishtech.com/u/8e33d3e4dd59ca773dadbb887e0d89b1.jpg"
+    ],
+    highlights: [
+      "25% protein, crunchy texture, no added sugar tricks",
+      "Made from 100% roasted peanuts",
+      "Great daily protein boost — on toast, in shakes, or by the spoon",
+      "100% original, guaranteed authentic"
+    ],
+    usage: "Enjoy 1-2 tablespoons daily as part of a balanced diet — on toast, with fruit, or blended into a shake."
+  },
+  {
+    id: "fishoil",
+    cardImage: "https://img.sanishtech.com/u/87b2e4e7bd0d20e4814ee4c93a141d5a.jpg",
+    name: "Omega-3 Fish Oil Softgels",
+    price: 2299,
+    strike: 3299,
+    save: 30,
+    images: [
+      "https://img.sanishtech.com/u/f3d95d6e3231c308b269b1c38adf9d46.jpg",
+      "https://img.sanishtech.com/u/f6d3aa259eda6d4bb54d558118a6ca9d.jpg",
+      "https://img.sanishtech.com/u/87b851bd471d611c50fc1fc5acd6ba61.jpg",
+      "https://img.sanishtech.com/u/11dbe5695c6177d48b28da0d67d05523.jpg"
+    ],
+    highlights: [
+      "Rich source of Omega-3 fatty acids (EPA & DHA)",
+      "Supports heart, brain, and joint health",
+      "Easy-to-swallow softgel capsules",
+      "100% original, guaranteed authentic"
+    ],
+    usage: "Take 1-2 softgels daily with a meal, or as directed on the label."
+  }
+];
+
+const WHATSAPP_NUMBER = "9779705283444";
+
+let cart = {};
+
+function fmt(n){ return "Rs" + n.toLocaleString("en-IN"); }
+
+function getProduct(id){ return PRODUCTS.find(p => p.id === id); }
+
+function renderGrid(){
+  const grid = document.getElementById('productGrid');
+  grid.innerHTML = PRODUCTS.map(p => `
+    <div class="product-card" onclick="showProduct('${p.id}')">
+      <div class="product-img-wrap">
+        <span class="badge">SAVE ${p.save}%</span>
+        <img src="${p.cardImage || p.images[0]}" alt="${p.name}" loading="lazy">
+      </div>
+      <div class="product-info">
+        <div class="product-name">${p.name}</div>
+        <div class="product-price-row">
+          <span class="price">${fmt(p.price)}</span>
+          <span class="price-strike">${fmt(p.strike)}</span>
+        </div>
+        <button class="add-btn" onclick="event.stopPropagation(); addToCart('${p.id}', 1); pulseToast('${p.name.replace(/'/g,"\\'")} added to cart');">Add to Cart</button>
+      </div>
+    </div>
+  `).join('');
+}
